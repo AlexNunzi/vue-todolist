@@ -30,7 +30,7 @@
                         <ul>
                             <li v-for="(task, i) in toDoList">
                                 <h3 v-bind:class="taskDone(i)">{{toDoList[i].text}}</h3>
-                                <i class="deleteButton fa-solid fa-trash"></i>
+                                <i @click="deleteTask(i)" class="deleteButton fa-solid fa-trash"></i>
                             </li>
                         </ul>
                         

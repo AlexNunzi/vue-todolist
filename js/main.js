@@ -28,6 +28,9 @@ createApp({
         if(this.toDoList[index].done){
             return 'done';
         }
+    },
+    deleteTask(index){
+        this.toDoList.splice(index, 1);
     }
   }
 }).mount('#app')
