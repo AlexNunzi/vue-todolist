@@ -49,6 +49,9 @@ createApp({
             this.userMessage = 'Scrivi il testo del nuovo impegno';
             this.warningClass = '';
         }
+    },
+    switchDone(index){
+        this.toDoList[index].done = !this.toDoList[index].done;
     }
   }
 }).mount('#app')

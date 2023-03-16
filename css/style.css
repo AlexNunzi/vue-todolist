@@ -98,6 +98,10 @@ body{
     border-bottom: 2px solid var(--border-softGray);
 }
 
+.todo-body li h3{
+    cursor: pointer;
+}
+
 .todo-body li:hover{
     background-color: var(--bg-hover);
 }
