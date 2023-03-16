@@ -45,8 +45,10 @@ createApp({
         }
     },
     resetWarning(){
-        this.userMessage = 'Scrivi il testo del nuovo impegno';
-        this.warningClass = '';
+        if(this.inputText.replace(/\s\s+/g, ' ').trim().length >= 5){
+            this.userMessage = 'Scrivi il testo del nuovo impegno';
+            this.warningClass = '';
+        }
     }
   }
 }).mount('#app')
