@@ -4,22 +4,22 @@ createApp({
   data() {
     return {
         toDoList: [
-            {
-                text: 'task1',
-                done: false
-            },
-            {
-                text: 'task2',
-                done: false
-            },
-            {
-                text: 'task3',
-                done: true
-            },
-            {
-                text: 'task4',
-                done: false
-            },
+            // {
+            //     text: 'task1',
+            //     done: false
+            // },
+            // {
+            //     text: 'task2',
+            //     done: false
+            // },
+            // {
+            //     text: 'task3',
+            //     done: true
+            // },
+            // {
+            //     text: 'task4',
+            //     done: false
+            // },
         ],
         inputText: '',
         userMessage: 'Scrivi il testo del nuovo impegno',

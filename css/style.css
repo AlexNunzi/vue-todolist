@@ -11,6 +11,7 @@
     --border-softGray: #ececec;
     --border-deepGray: #464646;
     --text-warning: #FF0000;
+    --text-empty: #007100;
 }
 
 /* REGOLE GENERALI -------------------------------------- */
@@ -98,12 +99,17 @@ body{
     border-bottom: 2px solid var(--border-softGray);
 }
 
-.todo-body li h3{
+.taskText{
     cursor: pointer;
 }
 
 .todo-body li:hover{
     background-color: var(--bg-hover);
+}
+
+.todo-body .empty{
+    color: var(--text-empty);
+    text-align: center;
 }
 
 .deleteButton{

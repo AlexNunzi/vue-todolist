@@ -27,9 +27,10 @@
                         <button @click="addTask" id="addButton">Aggiungi</button>
                     </div>
                     <div class="todo-body">
-                        <ul>
+                        <h2 class="empty" v-if="toDoList.length == 0">Non ci sono impegni da mostrare al momento, aggiungine uno se vuoi!</h2>
+                        <ul v-else>
                             <li v-for="(task, i) in toDoList">
-                                <h3 @click="switchDone(i)" v-bind:class="taskDone(i)">{{toDoList[i].text}}</h3>
+                                <h3 class="taskText" @click="switchDone(i)" v-bind:class="taskDone(i)">{{toDoList[i].text}}</h3>
                                 <i @click="deleteTask(i)" class="deleteButton fa-solid fa-trash"></i>
                             </li>
                         </ul>
