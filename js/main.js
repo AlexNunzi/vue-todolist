@@ -20,7 +20,10 @@ createApp({
                 text: 'task4',
                 done: false
             },
-        ]
+        ],
+        inputText: '',
+        userMessage: 'Scrivi il testo del nuovo impegno',
+        warningClass: ''
     }
   },
   methods: {
@@ -31,6 +34,19 @@ createApp({
     },
     deleteTask(index){
         this.toDoList.splice(index, 1);
+    },
+    addTask(){
+        if(this.inputText.replace(/\s\s+/g, ' ').trim().length >= 5){
+            this.toDoList.unshift({text: this.inputText.replace(/\s\s+/g, ' ').trim(), done: false});
+            this.inputText = '';
+        } else {
+            this.userMessage = 'Il testo inserito deve essere composto da almeno 5 caratteri';
+            this.warningClass = 'warning'
+        }
+    },
+    resetWarning(){
+        this.userMessage = 'Scrivi il testo del nuovo impegno';
+        this.warningClass = '';
     }
   }
 }).mount('#app')

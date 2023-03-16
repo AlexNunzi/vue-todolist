@@ -10,6 +10,7 @@
     --bg-hover: #F8F8F8;
     --border-softGray: #ececec;
     --border-deepGray: #464646;
+    --text-warning: #FF0000;
 }
 
 /* REGOLE GENERALI -------------------------------------- */
@@ -63,8 +64,14 @@ body{
     text-align: center;
 }
 
+.todo-head label{
+    display: block;
+    margin-bottom: 16px;
+}
+
 #newTask{
     height: 32px;
+    padding: 0 8px;
     margin: 0 8px;
     border: 2px solid var(--border-softGray);
     border-radius: 8px;
@@ -105,4 +112,8 @@ body{
 
 .done{
     text-decoration: 3px solid line-through;
+}
+
+.warning{
+    color: var(--text-warning);
 }

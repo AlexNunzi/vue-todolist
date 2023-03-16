@@ -22,9 +22,9 @@
             <main>
                 <div id="todo" class="container">
                     <div class="todo-head">
-                        <label for="newTask">Scrivi il testo del nuovo impegno</label>
-                        <input id="newTask" type="text">
-                        <button id="addButton">Aggiungi</button>
+                        <label v-bind:class="warningClass" for="newTask">{{userMessage}}</label>
+                        <input @keydown="resetWarning" id="newTask" type="text" placeholder="Nuovo impegno..." v-model="inputText">
+                        <button @click="addTask" id="addButton">Aggiungi</button>
                     </div>
                     <div class="todo-body">
                         <ul>
