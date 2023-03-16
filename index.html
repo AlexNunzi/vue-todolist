@@ -20,7 +20,7 @@
             </header>
 
             <main>
-                <div class="container">
+                <div id="todo" class="container">
                     <div class="todo-head">
                         <label for="newTask">Scrivi il testo del nuovo impegno</label>
                         <input id="newTask" type="text">
@@ -28,19 +28,12 @@
                     </div>
                     <div class="todo-body">
                         <ul>
-                            <li>
-                                <h3>Prova</h3>
-                                <i class="deleteButton fa-solid fa-trash"></i>
-                            </li>
-                            <li>
-                                <h3>Prova</h3>
-                                <i class="deleteButton fa-solid fa-trash"></i>
-                            </li>
-                            <li>
-                                <h3 class="done">Prova</h3>
+                            <li v-for="(task, i) in toDoList">
+                                <h3 v-bind:class="taskDone(i)">{{toDoList[i].text}}</h3>
                                 <i class="deleteButton fa-solid fa-trash"></i>
                             </li>
                         </ul>
+                        
                     </div>
                 </div>
 

@@ -3,7 +3,31 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      message: 'Hello Vue!'
+        toDoList: [
+            {
+                text: 'task1',
+                done: false
+            },
+            {
+                text: 'task2',
+                done: false
+            },
+            {
+                text: 'task3',
+                done: true
+            },
+            {
+                text: 'task4',
+                done: false
+            },
+        ]
+    }
+  },
+  methods: {
+    taskDone(index){
+        if(this.toDoList[index].done){
+            return 'done';
+        }
     }
   }
 }).mount('#app')
