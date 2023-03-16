@@ -3,3 +3,99 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --bg-body: #38AAFF;
+    --bg-white: #FFFFFF;
+    --bg-hover: #F8F8F8;
+    --border-softGray: #ececec;
+    --border-deepGray: #464646;
+}
+
+/* REGOLE GENERALI -------------------------------------- */
+
+body{
+    background-color: var(--bg-body);
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* HEADER ----------------------------------------------- */
+
+#header-logo{
+    background-color: var(--bg-white);
+    padding: 16px 0px 16px 24px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 10px 10px #1298ff;
+    margin-bottom: 40px;
+}
+
+#logo{
+    height: 100px;
+    vertical-align: middle;
+}
+
+#logo-text{
+    font-size: 60px;
+    vertical-align: middle;
+}
+
+/* MAIN ------------------------------------------------- */
+
+.todo-head{
+    background-color: var(--bg-white);
+    border-radius: 20px 20px 0 0;
+    border-bottom: 2px solid var(--border-softGray);
+    padding: 20px;
+    text-align: center;
+}
+
+#newTask{
+    height: 32px;
+    margin: 0 8px;
+    border: 2px solid var(--border-softGray);
+    border-radius: 8px;
+}
+
+#addButton{
+    height: 32px;
+    padding: 0 8px;
+}
+
+.todo-body{
+    background-color: var(--bg-white);
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+}
+
+.todo-body li{
+    color: var(--border-deepGray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--border-softGray);
+}
+
+.todo-body li:hover{
+    background-color: var(--bg-hover);
+}
+
+.deleteButton{
+    padding: 8px;
+    border: 2px solid var(--border-deepGray);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.done{
+    text-decoration: 3px solid line-through;
+}
